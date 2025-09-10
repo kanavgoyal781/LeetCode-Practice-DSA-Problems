@@ -3,10 +3,10 @@ class Solution:
         if not root:
             return False
         
-        # If it's a leaf, check if we've hit the target
         if not root.left and not root.right:
             return targetSum == root.val
         
-        # Otherwise, keep searching in subtrees
-        return (self.hasPathSum(root.left, targetSum - root.val) or
-                self.hasPathSum(root.right, targetSum - root.val))
+        left_sum = self.hasPathSum(root.left, targetSum - root.val)
+        right_sum = self.hasPathSum(root.right, targetSum - root.val)
+        
+        return left_sum or right_sum
