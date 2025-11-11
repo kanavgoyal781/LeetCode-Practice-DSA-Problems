@@ -4,7 +4,6 @@
 #         self.val = x
 #         self.next = None
 
-pointers=[]
 class Solution:
     def hasCycle(self, head: Optional[ListNode]) -> bool:
         seen=[]
@@ -15,3 +14,4 @@ class Solution:
             seen.append(current.next)
             current=current.next
         return False
+            
