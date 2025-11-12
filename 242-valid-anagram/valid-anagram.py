@@ -1,18 +1,15 @@
 class Solution:
     def isAnagram(self, s: str, t: str) -> bool:
-        hm_s={}
-        hm_t={}
+        hm={}
+        hm2={}
         for i in s:
-            if i in hm_s.keys():
-                hm_s[i]=hm_s[i]+1
+            if i in hm:
+                hm[i]=hm[i]+1
             else:
-                hm_s[i]=1
+                hm[i]=1
         for j in t:
-            if j in hm_t.keys():
-                hm_t[j]=hm_t[j]+1
+            if j in hm2:
+                hm2[j]=hm2[j]+1
             else:
-                hm_t[j]=1
-        print(hm_s)
-        print(hm_t)
-        return hm_s==hm_t
-        
+                hm2[j]=1
+        return hm==hm2
