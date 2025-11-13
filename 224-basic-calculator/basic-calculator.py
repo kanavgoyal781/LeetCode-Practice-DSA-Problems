@@ -23,7 +23,7 @@ class Solution:
             elif val==')':
                 total_result += sign * num
                 num=0
-                sign=1
+                sign=-1
                 prev_result,prev_sign=stack.pop()
                 total_result=total_result*prev_sign+prev_result
             
