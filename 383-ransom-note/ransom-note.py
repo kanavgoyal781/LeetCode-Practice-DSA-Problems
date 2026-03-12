@@ -13,8 +13,6 @@ class Solution:
             else:
                 h2[j]=1
         for key,values in h1.items():
-            if key not in h2.keys():
-                return False
-            if h2[key]<values:
+            if (key not in h2.keys()) or h2[key]<values:
                 return False
         return True
